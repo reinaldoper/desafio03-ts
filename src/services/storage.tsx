@@ -1,3 +1,5 @@
+
+
 interface IDIoBank {
     login: boolean;
 }
@@ -17,3 +19,13 @@ export const createLocalStorage = (): void => {
 export const changeLocalStorage = (dioBank: IDIoBank): void => {
     localStorage.setItem('diobank', JSON.stringify(dioBank))
 }
+
+export const changeRemoteStorage = (value: string, data: string): void => {
+    localStorage.setItem(value, JSON.stringify(data))
+}
+
+export const getRemoteStorage = (value: string): string => {
+    const result = JSON.parse(localStorage.getItem(value) as string);
+    return result;
+};
+

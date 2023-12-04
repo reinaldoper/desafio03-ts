@@ -16,7 +16,7 @@ function App() {
       <AppContextProvider>
         <ChakraProvider>
           <Layout>
-            < MainRoutes />
+            <MainRoutes />
           </Layout>
         </ChakraProvider>
       </AppContextProvider>
